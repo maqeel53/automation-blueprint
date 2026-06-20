@@ -1,0 +1,14 @@
+{
+  "validCustomer": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "postalCode": "75063"
+  },
+  "taxRate": 0.08,
+  "successMessage": "Thank you for your order!",
+  "errorMessages": {
+    "firstNameRequired": "Error: First Name is required",
+    "lastNameRequired": "Error: Last Name is required",
+    "postalCodeRequired": "Error: Postal Code is required"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "automation-blueprint",
+  "version": "1.0.0",
+  "description": "Production-grade Playwright automation framework showcasing POM, fixtures, API sync, multi-reporter, and CI/CD best practices against SauceDemo.",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:smoke": "npx playwright test --grep @smoke",
+    "test:chromium": "npx playwright test --project=chromium",
+    "test:firefox": "npx playwright test --project=firefox",
+    "test:webkit": "npx playwright test --project=webkit",
+    "report": "npx playwright show-report playwright-report",
+    "report:allure": "allure generate allure-results --clean -o allure-report && allure open allure-report",
+    "delete:reports": "rm -rf playwright-report allure-results allure-report",
+    "delete:screenshots": "rm -rf test-results",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "testing",
+    "pom",
+    "page-object-model",
+    "e2e",
+    "saucedemo",
+    "qa",
+    "framework"
+  ],
+  "author": "Muhammad Aqeel",
+  "license": "MIT",
+  "devDependencies": {
+    "@faker-js/faker": "^10.0.0",
+    "@playwright/test": "^1.52.0",
+    "allure-playwright": "^3.6.0",
+    "dotenv": "^16.5.0",
+    "eslint": "^8.57.0"
+  }
+}

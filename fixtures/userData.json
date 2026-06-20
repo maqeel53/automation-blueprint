@@ -1,0 +1,33 @@
+{
+  "users": {
+    "standard": {
+      "username": "standard_user",
+      "password": "secret_sauce",
+      "description": "Default user with full access"
+    },
+    "lockedOut": {
+      "username": "locked_out_user",
+      "password": "secret_sauce",
+      "description": "User locked out of the application"
+    },
+    "problem": {
+      "username": "problem_user",
+      "password": "secret_sauce",
+      "description": "User with intentional UI bugs"
+    },
+    "performanceGlitch": {
+      "username": "performance_glitch_user",
+      "password": "secret_sauce",
+      "description": "User with slow page loads"
+    },
+    "error": {
+      "username": "error_user",
+      "password": "secret_sauce",
+      "description": "User that triggers app errors"
+    }
+  },
+  "invalidCredentials": {
+    "username": "invalid_user",
+    "password": "wrong_password"
+  }
+}

@@ -42,6 +42,7 @@ automation-blueprint/
 │   └── checkoutData.json           # Checkout validation data
 │
 ├── .github/workflows/ci.yml       # GitHub Actions CI pipeline
+├── .mcp.json                      # MCP server configs (Playwright + Playwright Test)
 ├── playwright.config.js            # Playwright configuration
 ├── .eslintrc.json                  # Code quality rules
 └── package.json                    # Dependencies & scripts
@@ -62,6 +63,7 @@ automation-blueprint/
 | **Parallel Execution** | Fully parallel test runs |
 | **CI/CD** | GitHub Actions with matrix strategy |
 | **`data-test` Selectors** | Resilient locator strategy |
+| **MCP Servers** | Playwright MCP + Playwright Test MCP for AI-assisted automation |
 | **Error Handling** | Uncaught exception suppression |
 | **ESLint** | Enforced code quality |
 
@@ -145,6 +147,20 @@ Tests run automatically on every **push** and **pull request** to `main` via Git
 | [ESLint](https://eslint.org) | Code quality |
 | [GitHub Actions](https://github.com/features/actions) | CI/CD |
 | [dotenv](https://github.com/motdotla/dotenv) | Environment management |
+| [Playwright MCP](https://github.com/anthropics/mcp) | AI-assisted browser automation via MCP |
+
+---
+
+## MCP Server Integration
+
+This project includes [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server configurations for AI-assisted test automation:
+
+| Server | Command | Purpose |
+|---|---|---|
+| **playwright** | `npx @playwright/mcp@latest` | Browser interaction — navigate, click, fill forms, take snapshots via AI agents |
+| **playwright-test** | `npx playwright run-test-mcp-server` | Run, debug, and analyze test results through AI-driven workflows |
+
+MCP servers enable AI tools like **Claude Code**, **Cursor**, and **Windsurf** to directly interact with the browser and test runner, powering agentic test automation workflows.
 
 ---
 
